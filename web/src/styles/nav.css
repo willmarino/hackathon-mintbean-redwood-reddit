@@ -1,6 +1,21 @@
 .navbar{
   width: 100%;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: gray;
+}
+
+.navbar-header{
+  width: 100%;
 
   display: flex;
   justify-content: space-between;
+}
+
+.navbar-subreddits-list{
+
 }

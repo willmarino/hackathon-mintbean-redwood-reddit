@@ -17,7 +17,6 @@ class NavLayout extends React.Component{
     this.setState({open: false})
   }
   render(){
-    debugger;
     const user = auth.currentUser();
     let sessionButton;
     let curUserEmail;
@@ -36,13 +35,14 @@ class NavLayout extends React.Component{
       curUserEmail = null;
     }
     let manualSessionModal = (this.state.open) ? <ManualSessionModal closeFunction={this.handleClose}/> : null;
-    debugger;
     let { children } = this.props;
     return (<>
-      <div className="navbar">
-        <div>Redwood-reddit-clone</div>
-        <p>{curUserEmail}</p>
-        {sessionButton}
+      <div className='navbar'>
+        <div className="navbar-header">
+          <div>Redwood-reddit-clone</div>
+          <p>{curUserEmail}</p>
+          {sessionButton}
+        </div>
       </div>
       {manualSessionModal}
       <main>{children}</main>
