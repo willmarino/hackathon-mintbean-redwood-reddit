@@ -17,6 +17,7 @@ const ManualLoginModal = ({closeFunction}) => {
   return(
     <div>
       <Form onSubmit={onSubmit}>
+        <p>Login</p>
 
         <Label name='email'/>
         <TextField name='email'/>

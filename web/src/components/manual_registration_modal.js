@@ -3,12 +3,19 @@ import auth from '../go_true/go_true_auth';
 
 const ManualRegistrationModal = ({closeFunction}) => {
   const onSubmit = (data) => {
-    debugger;
-    console.log(data);
+    const { email, password } = data;
+    auth.signup(email, password)
+      .then((res) => {
+        console.log('registered!', res);
+        auth.login(email, password)
+          .then(() => closeFunction());
+      })
+      .catch((e) => console.log("error!", e));
   }
   return(
     <div>
       <Form onSubmit={onSubmit}>
+        <p>Register</p>
 
         <Label name='email'/>
         <TextField name='email'/>
