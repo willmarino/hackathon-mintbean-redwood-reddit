@@ -1,4 +1,5 @@
 @import './styles/nav.css';
+@import './styles/manual_session_modal.css';
 
 #redwood-app{
   display: flex;

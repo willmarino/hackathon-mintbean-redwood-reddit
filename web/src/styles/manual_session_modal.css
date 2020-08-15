@@ -1,0 +1,23 @@
+.manual-session-modal-background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, .5);
+}
+
+.manual-session-modal-child{
+  position: absolute;
+	background: white;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 400px;
+	z-index: 10;
+	display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+}

@@ -18,6 +18,6 @@ model UserExample {
 }
 
 // model User {
-//   id    Int   @id @default(autoincrement())
-//   username
+//   id        Int     @id @default(autoincrement())
+//   email     String  @unique
 // }
