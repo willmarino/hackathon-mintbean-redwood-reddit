@@ -1,16 +1,18 @@
 .navbar{
   width: 100%;
-  height: 200px;
+  height: 250px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 10px 20px 10px;
+  padding-bottom: 30px;
+
+  /* padding: 0 10px 20px 10px; */
   box-sizing: border-box;
 
-  /* background: gray; */
+  /* background: 	#E8E8E8; */
 }
 
 .navbar-header{
@@ -18,6 +20,21 @@
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 0px 20px;
+
+  background: 	#E8E8E8;
+  border-bottom: 1px solid 		#282828;
+}
+
+.session-button{
+  /* max-height: 23px; */
+}
+
+.session-button:hover{
+  cursor: pointer;
 }
 
 .navbar-subreddits-list-and-header{
