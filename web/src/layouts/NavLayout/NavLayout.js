@@ -24,7 +24,7 @@ class NavLayout extends React.Component{
     let sessionButton;
     let curUserEmail;
     if(user){
-      sessionButton = <p onClick={() => {
+      sessionButton = <p className="session-button" onClick={() => {
           user.logout()
           .then(() => {
             this.forceUpdate();
@@ -34,7 +34,7 @@ class NavLayout extends React.Component{
       </p>;
       curUserEmail = user.email;
     }else{
-      sessionButton = <p onClick={this.handleOpen}>Login</p>;
+      sessionButton = <p className="session-button" onClick={this.handleOpen}>Login</p>;
       curUserEmail = null;
     }
     let manualSessionModal = (this.state.open) ? <ManualSessionModal closeFunction={this.handleClose}/> : null;

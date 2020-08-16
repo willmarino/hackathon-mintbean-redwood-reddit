@@ -1,10 +1,11 @@
+import { Link, routes } from '@redwoodjs/router';
 
-
-const SubredditBlock = ({title}) => {
+const SubredditBlock = ({sr}) => {
+  let { id, title } = sr;
   return(
-    <div className="subreddit-block">
+    <Link to={routes.subredditDisplay({id: id})} className="subreddit-block">
       <p>{title}</p>
-    </div>
+    </Link>
   )
 }
 

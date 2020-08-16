@@ -2,12 +2,17 @@
 @import './styles/manual_session_modal.css';
 @import './styles/subreddits.css';
 
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
 #redwood-app{
 
   min-width: 800px;
 
-
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
