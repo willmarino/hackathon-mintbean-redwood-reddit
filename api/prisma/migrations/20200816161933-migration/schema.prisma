@@ -1,6 +1,6 @@
 datasource DS {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -23,14 +23,16 @@ model Subreddit {
   id        Int      @id @default(autoincrement())
   title     String   @unique
   createdAt DateTime @default(now())
+  posts     Post[]
 }
 
 model Post {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   title       String
   body        String
-  score       Int      @default(0)
+  score       Int       @default(0)
   userId      String
+  subreddit   Subreddit @relation(fields: [subredditId], references: [id])
   subredditId Int
-  createdAt   DateTime @default(now())
+  createdAt   DateTime  @default(now())
 }

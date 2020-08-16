@@ -17,7 +17,7 @@ export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
 export const Success = ({ subreddits }) => {
   let subredditBlocks = subreddits.map((sr) => {
-    return <SubredditBlock title={sr.title} key={sr.id}/>
+    return <SubredditBlock sr={sr} key={sr.id}/>
   })
   return subredditBlocks;
 }
