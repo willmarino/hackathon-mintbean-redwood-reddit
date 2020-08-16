@@ -1,12 +1,16 @@
 .navbar{
   width: 100%;
-  height: 300px;
+  height: 200px;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
-  background: gray;
+  padding: 0 10px 20px 10px;
+  box-sizing: border-box;
+
+  /* background: gray; */
 }
 
 .navbar-header{
@@ -16,6 +20,30 @@
   justify-content: space-between;
 }
 
-.navbar-subreddits-list{
+.navbar-subreddits-list-and-header{
+  display: flex;
+  flex-direction: column;
+}
 
+.navbar-subreddits-list-and-header > p{
+  margin-left: 10px;
+}
+
+.navbar-subreddits-list{
+  display: flex;
+
+  margin: 0 auto;
+}
+
+.brand-div{
+  display: flex;
+  align-items: center;
+}
+.brand-div{
+  cursor: pointer;
+}
+
+.brand-div > p{
+  font-size: 20px;
+  margin-left: 7px;
 }
